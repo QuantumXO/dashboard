@@ -1,0 +1,834 @@
+*
+	box-sizing: border-box
+body
+	height: 100%
+	min-width: 320px
+	width: 100%
+	position: absolute
+	font: 14px/1.42857143 $font-family-el
+	background-color: transparent
+	border: 10px solid transparent
+body:before
+	top: 0
+	left: 0
+	content: ''
+	width: 100%
+	height: 100%
+	position: fixed
+	background-size: cover
+	background: #582266 url(../img/bg.jpg) 50% 50% no-repeat
+a, span, p
+	font-family: $font-family-el
+a, a:visited
+	text-decoration: none
+	color: $color-el-normal	
+input, button
+	outline: none
+input::-webkit-input-placeholder
+	opacity: 1
+	transition: opacity .3s ease
+input::-moz-placeholder
+	opacity: 1
+	transition: opacity .3s ease
+input:-moz-placeholder
+	opacity: 1
+	transition: opacity .3s ease
+input:-ms-input-placeholder
+	opacity: 1
+	transition: opacity .3s ease
+input:focus::-webkit-input-placeholder
+	opacity: 0
+	transition: opacity .3s ease
+input:focus::-moz-placeholder
+	opacity: 0
+	transition: opacity .3s ease
+input:focus:-moz-placeholder
+	opacity: 0
+	transition: opacity .3s ease
+input:focus:-ms-input-placeholder
+	opacity: 0
+	transition: opacity .3s ease
+.wrapper
+	height: 100%
+	overflow: hidden
+	position: relative
+	border-radius: 5px
+	margin-bottom: 10px
+	box-shadow: 0 3px 20px #000
+	background-clip: content-box
+/////////////////////////
+//// HEADER
+/////////////////////////	
+nav
+	top: 0
+	width: 100%
+	position: relative
+	height: $height-header
+	background-color: $bg-interface
+	z-index: 1000
+	a:not(.header-logo)
+		line-height: $height-header
+.header-nav-mobile
+	display: none
+	padding: 15px
+.header-logo	
+	float: left
+	width: 200px
+	display: block
+	padding-left: 20px
+	height: $height-header
+	i
+		font-size: 48px
+		color: $color-brand
+		line-height: $height-header
+		font-weight: 700
+	span
+		font-size: 28px
+		padding-left: 5px
+		padding-top: 17px
+		display: inline-block
+		color: $color-el-main
+		vertical-align: top
+		text-transform: capitalize
+.header-nav
+	float: left
+	height: $height-header
+	li
+		text-align: center
+		display: inline-block
+	a, a:visited
+		display: block
+		padding: 0 10px
+		font-size: 15px
+		text-transform: capitalize
+	a:hover, a:focus	
+		color: $color-hover
+.header-dropdown
+	i
+		font-size: .85em	
+		padding-left: 3px
+	ul
+		display: none // !!! CHANGE !!!
+.header-logOut
+	float: right
+	display: block
+	padding: 0 31px
+.header-logOut:hover, .header-logOut:focus
+	color: $color-el-hover
+		
+/////////////////////////
+//// CONTAINER
+/////////////////////////
+.container
+	top: 0
+	width: 100%
+	height: 100%
+	overflow: hidden
+	position: absolute
+	border-top: 75px solid transparent
+	
+/////////////////////////
+//// ASIDE
+/////////////////////////	
+aside
+	float: left
+	width: 200px
+	height: 100%
+	overflow: hidden
+	position: relative
+	transition: width .2s
+	background-color: $bg-interface	
+	z-index: 100
+	i
+		color: $color-el-hover
+.aside_tabs-list
+	overflow: hidden	
+.aside_tabs-item
+	width: 20%
+	float: left
+	height: 30px
+	display: block
+	position: relative
+	text-align: center
+	a
+		display: block
+		color: $color-el-normal
+	.fa
+		line-height: 30px	
+.aside_tabs-item:hover, .aside_tabs-item:focus
+	cursor: pointer
+	background-color: $bg-el-hover
+.aside_tabs-item.new:after
+	top: 7px
+	right: 7px
+	width: 4px
+	height: 4px
+	content: ''
+	display: block
+	border-radius: 50%
+	position: absolute
+	background-color: $color-red
+.ui-tabs-active	
+	border-bottom: 2px solid $color-red
+	a
+		color: $color-active
+div[id*=fragment]	
+	max-height: 100%
+	height: 100%
+	width: 100%
+	position: relative
+.aside-wrap
+	width: 100%
+	margin-top: -30px
+	padding: 35px 0 40px
+.aside-inner
+	width: 100%
+	min-width: 200px
+	overflow: hidden
+	vertical-align: top
+	display: inline-block
+	transition: margin .2s	
+.aside-title
+	font: 700 14px $font-family-el
+	color: $color-el-main
+	padding: 10px 20px 5px
+	text-transform: capitalize
+.aside-nav
+	li
+		overflow: hidden
+	a
+		height: 32px
+		display: block
+		font-size: 14px
+		overflow: hidden
+		line-height: 32px
+		position: relative
+		padding: 0 20px 0 29px
+		text-transform: capitalize
+		border-left: 3px solid transparent
+	a:hover, a:focus	
+		color: $color-hover !important
+	a.active
+		border-left: 3px solid $color-brand
+	a:before
+		font-size: 14px
+	span
+		top: 0
+		left: 55px
+		//padding-left: 10px
+		position: absolute
+	i
+		line-height: 1
+		text-align: center
+.aside-nav-left	
+	float: left
+	.fa:before
+		width: 18px
+		font-size: 14px
+		display: block
+.aside-nav-right
+	float: right
+	i
+		font-size: 12px
+		border-radius: 10px
+		padding: 2px 7px
+	i:not(.fa)
+		background-color: rgba(36, 41, 44, .5)
+/////////////////////////////////////
+.aside-btn		
+	padding: 10px 20px 2px	
+	a
+		width: 100%
+		display: block
+		padding: 6px 12px
+		user-select: none
+		border-radius: 4px
+		text-align: center
+		white-space: nowrap
+		vertical-align: middle
+		//line-height: 1.42857143
+		touch-action: manipulation
+		border: 1px solid transparent
+		border-color: rgba(36, 41, 44, .5)
+		background-color: rgba(36, 41, 44, .5)
+	a:hover, a:focus
+		border-color: rgba(36, 41, 44, .5)
+		background-color: rgba(25, 28, 30, .5)
+
+///////// New Messages ///////////////////	
+.aside_msg-wrap
+	margin-bottom: 10px
+.aside_msg-list	
+	padding: 0 10px
+.aside_msg-item
+	position: relative
+	padding: 5px 10px 5px
+	border-bottom: 1px solid rgba(36, 41, 44, .5)	
+.aside_msg-title
+	i
+		margin-right: 5px
+	span
+		color: $color-el-hover
+		text-transform: capitalize	
+.aside_msg-item.new	
+	span
+		color: $color-el-main
+.aside_msg-text
+	margin-top: 4px
+	overflow: hidden
+	//font-size: 14px
+	white-space: nowrap
+	text-overflow: ellipsis
+	color: $color-el-hover
+.aside_msg-link
+	top: 0
+	left: 0	
+	width: 100%
+	height: 100%
+	display: block
+	position: absolute
+.aside_msg-link:hover
+	background-color: $bg-el-hover
+///////// Recent activity ///////////////////	
+.aside_ra-list
+	padding: 0 20px
+.aside_ra-item	
+	overflow: hidden
+	margin-bottom: 10px
+	padding-bottom: 10px
+	border-bottom: 1px solid rgba(36, 41, 44, .5)
+	i
+		float: left
+		padding: 5px
+		border-radius: 2px
+		text-align: center
+		border: 1px solid rgba(36, 41, 44, .5)
+		background-color: rgba(36, 41, 44, .5)
+.aside_ra-text		
+	float: left
+	width: 100%
+	font-size: 13px
+	line-height: 1.1
+	padding-left: 35px
+	margin-left: -28px	
+	color: $color-el-hover
+	a
+		font-size: 14px
+		color: $color-el-normal
+		text-transform: capitalize
+	a:hover, a:focus	
+		color: #88939C
+		text-decoration: underline
+.aside_ra-date
+	font-size: 12px
+
+///////// Settings ///////////////////		
+.aside_ss-wrap	
+	padding: 0 20px
+	margin-bottom: 10px
+.aside_ss-item
+	padding: 8px 0
+	span
+		line-height: 1.5
+		color: $color-el-hover
+		text-transform: capitalize
+.aside_ss-cell
+	float: right
+	input
+		cursor: pointer
+.onoffswitch 
+	top: 3px
+	width: 38px
+	position: relative 
+	-ms-user-select: none
+	-moz-user-select: none 
+	-webkit-user-select: none 
+.onoffswitch-checkbox 
+	display: none
+.onoffswitch-label 
+	padding: 0
+	height: 17px 
+	display: block 
+	cursor: pointer
+	overflow: hidden 
+	line-height: 18px
+	border-radius: 18px
+	//border: 2px solid #e3e3e3 
+	background-color: rgba(36,41,44,.5)
+	transition: background-color .3s ease-in
+.onoffswitch-label:before 
+	top: -1.5px 
+	margin: 0
+	bottom: 0
+	content: ""
+	width: 20px 
+	right: 20px
+	height: 20px
+	display: block 
+	position: absolute
+	border-radius: 18px
+	background-color: $color-brand
+	//border: 2px solid #e3e3e3
+	transition: all .3s ease-in 0s 
+//.onoffswitch-checkbox:checked + .onoffswitch-label 
+	//background-color: #49E845
+//.onoffswitch-checkbox:checked + .onoffswitch-label, 
+.onoffswitch-checkbox:checked + .onoffswitch-label:before 
+	//border-color: #49E845
+	background-color: #20C05C
+.onoffswitch-checkbox:checked + .onoffswitch-label:before 
+	right: -2px
+.js-switch-wrap	
+	clear: both
+	height: 12px
+	margin-top: 34px
+	position: relative
+	border-radius: 6px
+	background-color: #353C42
+	border: 1px solid rgba(36, 41, 44, .8)
+.switch-min, .switch-max	
+	padding: 1px 3px
+	font-size: 11px
+	border-radius: 4px
+	position: absolute
+	background-color: #353C42 //$color-el-red
+	border: 1px solid rgba(36, 41, 44, .8)
+	display: none
+.switch-min
+	top: -30px
+	left: -6.5px
+.switch-max
+	top: -30px
+	right: -6.5px
+.js-switcher-result
+	top: -30px
+	left: -6.5px
+	width: 29px
+	border-radius: 4px
+	font-size: 11px
+	color: $color-el-main
+	text-align: center
+	position: absolute
+	//border: 1px solid $color-el-red
+	background-color: $color-brand
+.ui-slider-handle
+	top: -3px
+	width: 18px
+	height: 18px
+	color: #000
+	cursor: pointer
+	margin-left: -9px
+	border-radius: 50%
+	touch-action: none
+	position: absolute
+	text-align: center
+	line-height: 1.6em
+	font-weight: normal
+	background-color: #353C42 //$color-el-red
+	border: 1px solid rgba(36, 41, 44, .8)
+.input-number-box
+	margin-top: -2px
+	position: relative
+.aside_input-number
+	width: 50px
+	height: 30px
+	box-shadow: none
+	padding: 5px 5px
+	border-radius: 3px
+	transition: all .3s ease
+	border: 1px solid rgba(36, 41, 44, .5)
+	background-color: rgba(36, 41, 44, .5)
+	input
+		border: none
+		outline: none
+		color: $color-el-normal
+		font-size: 12px
+		background: none
+		line-height: 1.3
+		-moz-appearance: textfield
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button
+	-webkit-appearance: none
+	margin: 0
+.input-number-box:hover > .aside_input-number,
+.input-number-box.focused > .aside_input-number,
+.input-number-less:hover + .aside_input-number,
+.input-number-less:focus + .aside_input-number,
+.input-number-more:hover + .aside_input-number,
+.input-number-more:focus + .aside_input-number
+	border-color: rgba(36, 41, 44, .5)
+	box-shadow: inset 0 0 3px $color-el-normal
+.input-number-more,
+.input-number-less
+	right: 8px
+	cursor: pointer
+	border-width: 5px
+	position: absolute
+	border-style: solid
+	user-select: none
+.input-number-more
+	top: 4px
+	border-color: transparent transparent $color-el-normal transparent
+.input-number-more:hover
+    border-color: transparent transparent #fff transparent	
+.input-number-less	
+	bottom: 4px
+	border-color: $color-el-normal transparent transparent transparent
+.input-number-less:hover
+    border-color: #fff transparent transparent transparent	
+///////// Stats ///////////////////		
+.aside_st-list
+	margin-top: 10px
+.aside_st-item
+	margin-bottom: 25px
+.aside_st-value
+	font-size: 20px
+	color: $color-el-main
+	line-height: 20px
+.aside_st-text
+	margin-bottom: 5px
+	color: $color-el-hover
+.aside_st-chart	
+.jqstooltip	
+	//overflow: hidden
+	height: 23px !important
+	position: relative
+	border-radius: 2px
+	//padding-right: 17px !important
+	background: rgba(0,0,0,.5) !important
+	border: 1px solid rgba(0,0,0,.5) !important
+	.jqsfield
+		padding-right: 11px
+		span
+			line-height: 3px
+			//display: inline-block
+			font-size: 8px !important
+					
+////////////////
+///////// Main ////////
+////////////////
+.main-wrap
+	height: 100%
+	margin-left: 200px
+	background-color: rgba(36, 41, 44, .75)
+.main-row
+	padding: 15px
+.main-head
+	overflow: hidden
+	margin-bottom: 15px
+.main-title
+	width: 100%
+	float: left
+	height: 36px
+	line-height: 1.42857143
+	font-size: 14px
+	padding-right: 230px
+	margin-right: -215px // -215px
+.breadcrumb
+	padding: 8px 15px
+	border-radius: 2px
+	background-color: rgba(36, 41, 44, .3)
+.main-search
+	float: right
+	width: 215px
+.main-search-input
+	float: left
+	height: 36px
+	max-width: 176px
+	color: $color-el-normal
+	font-size: 14px
+	padding: 5px 15px
+	border-radius: 4px
+	border-top-right-radius: 0
+	border-bottom-right-radius: 0
+	border: 1px solid rgba(36, 41, 44, .5)
+	border-right: none
+	background-color: rgba(36, 41, 44, .5)
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s
+.main-search-input,	.main-search-button
+	display: table-cell
+.main-search-button
+	height: 36px
+	outline: none
+	color: $color-el-normal
+	cursor: pointer
+	padding: 7px 12px
+	position: relative
+	transition: all .3s ease
+	touch-action: manipulation
+	border: 1px solid rgba(36, 41, 44, .5)
+	background-color: rgba(36, 41, 44, .5)
+	i
+		font-size: 14px
+.main-search-button:hover, .main-search-button:focus	
+	color: $color-hover
+	background-color: rgba(25, 28, 30, .5)
+.main-container
+	overflow: hidden
+.main-container-row	
+	overflow: hidden
+	//margin-left: -15px
+	//margin-right: -15px
+.main_b-center
+	width: 75%
+	float: left
+	margin-left: -15px
+	margin-right: -15px
+	padding-left: 7.5px
+	padding-right: 7.5px
+.main_panel
+	border-radius: 4px
+	margin-bottom: 15px
+	box-shadow: 0 1px 1px rgba(0,0,0, .05)
+	background-color: rgba(36, 41, 44, .3)
+.main_panel-title	
+	padding: 11px 20px 9px
+	border-bottom: 2px solid transparent
+	h3
+		color: $color-el-main
+		font-size: 12px
+		line-height: 16px
+		text-transform: uppercase
+	span
+		float: right
+		display: block
+		padding: 0 5px
+		font-size: 75%
+		line-height: 16px
+		border-radius: .25em
+		color: $color-el-main
+		background-color: $color-red
+.main_panel-title.new
+	overflow: hidden
+	h3
+		float: left
+.main_widget-wrap
+	overflow: hidden
+	padding: 15px 20px
+.main_widget-left
+	float: left
+	width: 100%
+	padding-right: 215px
+	margin-right: -200px
+.main_widget-title
+	color: $color-el-main
+	font-size: 18px
+	margin-left: 15px
+	text-transform: capitalize
+.main_widget-chart
+	//height: 250px
+	position: relative
+	//overflow: hidden
+.morris-hover
+	z-index: 1000
+	position: absolute
+.morris-default-style	
+	padding: 6px 14px
+	font-size: 12px
+	text-align: center
+	border-radius: 4px
+	font-family: sans-serif
+	background: rgba(0, 0, 0, .5)
+	border: 1px solid rgba(0, 0, 0, .5)
+.morris-hover-row-label
+	margin: .25em 0
+	font-weight: 700
+	color: $color-el-main
+.morris-hover-point
+	margin: .1em 0	
+	white-space: nowrap	
+.main_widget-right
+	float: left	
+	width: 200px	
+.main_widget-right-title
+	color: $color-el-main
+	font-size: 18px
+	text-align: center
+	text-transform: capitalize
+.main_widget-right-chart
+	height: 200px
+	margin-bottom: 14px
+	overflow: hidden
+	position: relative
+	svg
+		margin-top: -48px
+	path 
+		stroke: #30363c
+		cursor: pointer
+.main_widget-right-footer
+	text-align: center
+.main_widget-right-item
+	max-width: 32px
+	margin-right: 10px
+	display: inline-block
+	color: $color-el-normal
+	span:nth-child(1)
+		display: block
+.main_widget-right-label
+	text-transform: capitalize
+.main_widget-right-value
+	font-size: 18px
+	font-weight: 700
+	line-height: 20px
+.main_b-right
+	width: 25%
+	float: right
+.ov_widget-item
+	margin-bottom: 10px
+	padding-bottom: 5px
+	border-bottom: 1px solid rgba(36, 41, 44, .5)
+.ov_widget-item.inc > .ov_widget-value
+	color: $color-green
+.ov_widget-item.warn > .ov_widget-value
+	color: $color-red
+.ov_widget-item.dec > .ov_widget-value
+	color: $color-yellow
+.ov_widget-item.tack > .ov_widget-value
+	color: $color-el-hover
+.ov_widget-value
+	font-size: 22px
+	font-weight: 900
+	line-height: 24px	
+.ov_widget-info
+	font-size: 14px
+	margin-top: 3px
+	overflow: hidden
+	line-height: 16px
+	margin-bottom: 1px
+.ov_widget-info-title
+	float: left
+	width: 100%
+	padding-right: 95px
+	margin-right: -90px
+	color: $color-el-hover
+.ov_widget-info-change
+	float: left
+	width: 90px
+	text-align: right
+	color: $color-el-hover
+	.fa
+		display: none
+		margin-left: 3px
+.ov_widget-item.inc .fa-level-up	
+	color: $color-green
+	display: inline-block
+.ov_widget-item.warn .fa-level-down
+	color: $color-red
+	display: inline-block	
+.ov_widget-item.dec .fa-bolt
+	color: $color-yellow
+	display: inline-block	
+.ov_widget-item.tack .fa-thumb-tack
+	display: inline-block
+.ov_widget-bar	
+	color: $color-el-hover
+.ov_widget-progress
+	margin-top: 5px
+.ui-progressbar
+	height: 10px
+	overflow: hidden
+	border-radius: 4px
+	background-color: rgba(36, 41, 44, .5)
+.ui-progressbar-value
+	height: 100%
+	background-color: #1c8ed7	
+///////// MAIN BOTTOM //////////////////		
+.main-bottom
+	.main_panel
+		float: left
+		height: 320px
+		overflow: hidden
+		width: 41.66666667%
+		margin-left: 7.5px
+		margin-right: 7.5px
+		margin-bottom: 15px
+.feed_widget-item
+	overflow: hidden
+	margin-bottom: 15px
+	padding-bottom: 10px
+	.fa
+		float: left
+		padding: 9px
+		font-size: 20px
+		border-radius: 2px
+		color: $color-el-hover
+		border: 1px solid rgba(36,41,44,.5)
+		background-color: rgba(36,41,44,.5)
+.feed_widget-item:not(:last-child)
+	border-bottom: 1px solid rgba(36, 41, 44, .5)
+.feed_widget-info
+	float: left
+	width: 100%
+	padding-left: 55px
+	margin-left: -40px
+.feed_widget-text
+	margin-bottom: 5px
+	color: $color-el-hover
+	b
+		margin: 0 4px
+.feed_widget-text:not(b)
+	font-size: 13px
+.feed_widget-date
+	font-size: 12px
+	line-height: 14px
+	color: $color-el-hover
+///////// SUPPORT MESSAGES //////////////////	
+.sp_widget-top
+	margin-bottom: 10px
+	padding-bottom: 15px
+	border-bottom: 1px solid rgba(36, 41, 44, .5)	
+.sp_widget-info
+	float: left
+    width: 100%
+    height: 34px
+    padding-right: 95px
+    margin-right: -90px
+.sp_widget-title
+	line-height: 16px
+	font-weight: 700
+	display: inline-block
+	color: $color-el-hover
+	.fa
+		margin-right: 5px
+	span
+		font-size: 16px
+.sp_widget-btn
+	float: right
+	width: 90px
+	a
+		padding: 6px 12px
+		border-radius: 4px
+		text-align: center
+		vertical-align: middle
+		border: 1px solid transparent
+		transition: color .3s ease
+		border-color: rgba(36, 41, 44, .5)
+		background-color: rgba(36, 41, 44, .5)
+	a:hover
+		color: $color-hover
+.sp_widget-list
+	padding-bottom: 15px
+.sp_widget-item
+	overflow: hidden
+	padding-bottom: 8px
+	margin-bottom: 10px
+.sp_widget-item:not(:last-child)	
+	border-bottom: 1px solid rgba(36, 41, 44, .5)
+.sp_widget-user
+	margin-bottom: 2px
+.sp_widget-date
+	color: $color-el-normal
+.sp_widget-text
+	line-height: 16px
+	margin-bottom: 2px
+	color: $color-el-hover
+/////////////////////////
+//// FOOTER
+/////////////////////////	
+
+
+
+
+
+
+

@@ -1,0 +1,173 @@
+/* ****** @mixin  ****** */	
+
+/* ****** Variables ****** */	
+
+// Screen resolutions
+$HDTV:  1920px
+$XGA:   1024px
+$SVGA:  800px
+$VGWQA: 480px
+$QVGA:  320px
+
+$color-red: #ed4949 
+$color-blue: #1c8ed7
+$color-white: #ffffff
+$color-green: #20c05c
+$color-yellow: #fed42a
+
+$color-brand: $color-red		// red
+$color-hover: $color-white
+$color-active: $color-white		// active menu
+$color-el-main: $color-white	// title
+$color-el-normal: #5e6870
+$color-el-hover: #88939C
+$color-placeholder: $color-el-normal
+
+$font-family-el: Roboto, sans-serif
+$bg-interface: rgba(36, 41, 44, .8)
+$bg-el-hover: rgba(0, 0, 0, .1)
+
+$height-header: 75px
+
+.el
+	background-color: $bg-interface
+.el-title
+	color: $color-el-main
+.active
+	color: $color-active !important	
+.clearfix:after 
+	content: '.'
+	display: block
+	clear: both
+	visibility: hidden
+	height: 0
+.hidden
+	display: none
+.visible	
+	display: block !important
+.fa-tag
+	color: $color-el-hover
+.tag_clients
+	color: $color-red
+.tag_social
+	color: $color-yellow
+.tag_support
+	color: $color-blue		
+.panel-success .main_panel-title
+	border-color: $color-green
+.panel-danger .main_panel-title
+	border-color: $color-red
+.panel-info	.main_panel-title
+	border-color: $color-blue
+.name
+	text-transform: capitalize
+.name:hover	
+	color: $color-el-hover
+	text-decoration: underline
+/* ***** for debugging ***** */
+.bug
+	position: relative
+.bug:after
+	position: absolute
+	left: 50%
+	top: 50%
+	max-width: 99%
+	width: 288.922px
+	margin-left: -289.922px / 2 
+	margin-top: -19px
+	padding: 10px 0
+	content: "!!! Need FIX !!!"
+	font: 700 1.5em 'Arial'
+	text-align: center
+	border: 2px dashed red
+	color: red
+	z-index: 9999
+	cursor: pointer
+///// End debugging 
+	
+/* ****** font-face ****** */
+@font-face
+	font-family: 'AwesomeFont'
+	src: local('Awesome Font'), url('fonts/fontawesome-webfont.eot?v=4.7.0'), url('fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg')
+	font-weight: normal
+	font-style: normal	
+@font-face
+	font-family: 'Roboto'
+	src: local('Roboto'), url('fonts/Roboto.ttf')
+	font-style: normal	
+.fa 
+	font-size: inherit
+	text-rendering: auto
+	display: inline-block
+	-moz-osx-font-smoothing: grayscale
+	-webkit-font-smoothing: antialiased
+	font: normal normal normal 16px/1 'AwesomeFont'
+.fa-angle-right:before
+	content: "\f105"
+.fa-caret-down:before
+	content: "\f0d7"	
+.fa-power-off:before
+	content: "\f011"	
+.fa-home:before	
+	content: "\f015"	
+.fa-envelope-o:before 
+	content: "\f003"	
+.fa-comments-o:before 
+	content: "\f0e6"	
+.fa-rss:before 
+	content: "\f09e"	
+.fa-cog:before 
+	content: "\f013"	
+.fa-star:before 
+	content: "\f005"
+.fa-cube:before 
+	content: "\f1b2"
+.fa-envelope:before 
+	content: "\f0e0" 
+.fa-truck:before 
+	content: "\f0d1"	
+.fa-user:before 
+	content: "\f007"	
+.fa-folder-o:before 
+	content: "\f114"
+.fa-th-large:before 
+	content: "\f009"	
+.fa-clone:before 
+	content: "\f24d"
+.fa-table:before 
+	content: "\f0ce"	
+.fa-pie-chart:before 
+	content: "\f200"
+.fa-inbox:before
+	content: "\f01c"	
+.fa-upload:before
+	content: "\f093"
+.fa-tag:before
+	content: "\f02b"
+.fa-caret-right:before
+	content: "\f0da" 
+.fa-flag:before
+	content: "\f024" 
+.fa-cube:before
+	content: "\f1b2" 
+.fa-heart:before
+	content: "\f004" 
+.fa-dollar:before
+	content: "\f155"  
+.fa-search:before
+	content: "\f002" 
+.fa-level-up:before
+  content: "\f148"
+.fa-level-down:before
+	content: "\f149"
+.fa-bolt:before 
+	content: "\f0e7" 
+.fa-thumb-tack:before
+	content: "\f08d" 
+  
+  
+  
+  
+  
+  
+  
